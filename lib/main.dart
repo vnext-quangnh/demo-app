@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Demo App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-      ),
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue)),
       home: const HelloWorldPage(),
     );
   }
@@ -25,16 +23,8 @@ class HelloWorldPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Demo App'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: const Center(
-        child: Text(
-          'Hello World',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      appBar: AppBar(title: const Text('Demo App'), backgroundColor: Theme.of(context).colorScheme.inversePrimary),
+      body: const Center(child: Text('Hello World', style: TextStyle(fontSize: 24))),
     );
   }
 }
